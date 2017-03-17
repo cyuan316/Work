@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>驾校一点通</title>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<!---提示---->
+	<div class="alert" style="display: none" id="tipsAlert"><span>你还没有错题哦，快去做模拟考试吧~</span></div>
+<!--最佳解释-->
+      <div class="lightbox" style="display: none" id="lightbox">
+           <div class="topTips">
+           	    <div class="scoreTip" style="display: none" id="scoreTip"></div>
+                <div class="topTipsText">
+                </div>
+                <ul class="btn2_ul">
+                </ul>
+            </div>
+      </div>   
+<aritcle>
+
+<!--1-->
+<div class="main1" style="display:block" id="main1">
+     <div class="title"><img src="images/title.png"/></div>
+     <ul class="btn" id="menu_btn">
+          <li>章节练习</li>
+          <li>顺序练习</li>
+          <li>随机练习</li>
+          <li>错题练习</li>
+          <li>模拟考试</li>
+     </ul>
+</div>
+
+<!--模拟考试-->
+<div class="main2"  style="display:none" id="main2">
+	 <div class="upOne" id="upOne"></div>
+	 <div class="nextOne" id="nextOne"></div>
+     <div class="title f40"><span id="titleName">模拟考试</span><span class="Time f24" id="time" style="display: none">剩余时间:  23:12</span></div>
+     <div class="tips f20" id="titleNum">总分100分（90分过关）</div>
+     
+       
+     <ul class="con_ul" id="test">
+       <li><div>2、行车中当驾驶人意识到车辆爆胎时，应在控制住方向的情况下采取紧急制动，迫使车辆迅速停住。</div>
+            <div class="Select"><span class="sel">A、15 日以下拘留</span><span>B、吊销驾驶证</span><span>C、扣留车辆</span><span>D、扣留行驶证</span></div>
+            <div class="img"><img src="images/image207.jpg"/></div>
+            <div class="clear"></div>
+            <div class="Detail"><span class="error">您的答案：错</span><span class="right">正确答案：对</span> <span class="exp sel">本题解释</span></div>
+       </li>
+     </ul>
+     
+     <ul class="btn" id="test_btn">
+         <li class="blue" style="display: none">提交试卷</li>
+         <li class="red">重新出题</li>
+     </ul>
+</div>
+
+<!--章节练习-->
+<div class="main2" style="display:none" id="main3">
+     <div class="title">章节练习</div>
+     <ul class="con2_ul" id="chapter">
+     </ul>
+</div>
+
+
+</aritcle>
+
+<!--footer-->
+<footer class="f20">
+   <div class="Tip" id="Tip">
+   <span class="OK">确认</span>
+   <span class="arrow" style="display: none">翻页</span>
+   <span class="Return">返回</span>
+   </div>
+   
+   <span class="page" id="page"></span>
+</footer>
+</body>
+
+<script src="../../../../../lib/js/jquery-1.7.min.js"></script>
+
+<script src="../../../../../lib/js/scr/mstar/base/base.js"></script>
+<script src="../../../../../lib/js/scr/mstar/base/util/util.js"></script>
+<script src="../../../../../lib/js/scr/mstar/base/component.js"></script>
+<script src="../../../../../lib/js/scr/mstar/core/components/baselist.js"></script>
+<script src="../api/testData.js"></script>
+
+<script src="scripts/tips.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/time.js"></script>
+<script src="scripts/menu.js"></script>
+<script src="scripts/numBer.js"></script>
+<script src="scripts/test.js"></script>
+<script src="scripts/exam.js"></script>
+<script src="scripts/error.js"></script>
+<script src="scripts/ranDomTest.js"></script>
+<script src="scripts/chapter.js"></script>
+
+</html>

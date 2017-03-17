@@ -1,0 +1,12 @@
+version=0.1.1
+widget-shortName=\u4fc4\u7f57\u65af\u65b9\u5757
+widget-name=\u4fc4\u7f57\u65af\u65b9\u5757
+description=\u7ecf\u5178,\u8010\u73a9\u7684\u6e38\u620f\u54e6.
+logo=images/logo.png
+indexPage=index.html
+
+authorEmail=gavin2026@gmail.com
+authorName=MSTAR
+license=MSTAR
+#\u7248\u672c\u53f7\uff0c\u8bbe\u5907\u7a0b\u5e8f\u8bc6\u522b\uff08android\uff09
+versionCode=1

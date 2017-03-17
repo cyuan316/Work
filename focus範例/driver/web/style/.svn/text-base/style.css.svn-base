@@ -1,0 +1,108 @@
+body { overflow: hidden;margin:0; padding:0; font-size:30px; background:url(../images/body_bg.png) repeat-x center; font-family:"微软雅黑"; width:1366px; height:768px;}
+ul,li{  list-style:none; padding:0; margin:0;}
+h1,h2,h3,h4{ margin:0; padding:0; font-weight: 800;}
+p{ padding:0; margin:0;}
+.clear{ clear:both;}
+
+.f24{ font-size:24px;}
+.f18{font-size:18px;}
+.f20{font-size:20px;}
+.f40{font-size:40px;}
+.f_left{ float:left;}
+.f_right{ float:right;}
+
+.f_Gray{ color:#666}
+.f_red{ color:#F00}
+/*=========== 公共 ===================*/
+
+
+
+
+.main1{width:1210px; height:768px;margin:0 auto;background:url(../images/body_bg_2.png) no-repeat bottom; text-align:center;}
+.main1 .title{padding-top:220px;}
+.main1 .btn{ margin-top:60px;}
+.main1 .btn li{cursor:pointer; line-height:40px;  border:2px solid #3f6907; color: #090; font-size:24px; text-align:center; padding:0 5px; margin:3px;   display:inline-block;border-radius:10px; background:-webkit-gradient(linear, 0 0%, 0 100%, from(#FFF),color-stop(70%, #AAA), color-stop(70%, #BBB), color-stop(100%, #fff));}
+
+.main1 .btn li.current{background:-webkit-gradient(linear, 0 0%, 0 100%, from(#668f29),color-stop(70%, #6c9339), color-stop(70%, #568616), color-stop(100%, #558310)); color:#FFF;text-shadow:1px 1px 0px #75cc00;}
+
+
+.main2{width:1210px; height:700px;margin:0 auto;background:rgba(0,58,78,0.3);padding:25px 15px; color:#FFF;text-shadow:1px 1px 0px #000;}
+.main2 .title{ text-align:center; font-weight:bold; color:#FF9;}
+.main2 .tips{ font-weight:normal; display:block; height:40px; line-height:40px; text-align:center; border-bottom:1px dashed rgba(255,255,255,0.3);}
+.main2 .title .Time{padding-left:30px; font-weight:normal;}
+
+.main2 .con_ul{ padding:20px 0; color:#CCC; height:490px; overflow:hidden;}
+.main2 .con_ul li{ overflow:h; clear:both;}
+.main2 .con_ul li .Select{ margin-left:50px; line-height:220%; float:left }
+.main2 .con_ul li .Select span{cursor:pointer; background:url(../images/Select.png) left center no-repeat; padding-left:30px; margin-right:30px; display:block;}
+.main2 .con_ul li .Select span.sel{background:url(../images/Select_sel.png) left center no-repeat;}
+
+.main2 .con_ul li .img{ width:300px; float:right;}
+
+/*章节练习*/
+.main2 .con2_ul{padding:20px 0; color:#CCC; height:620px; overflow:hidden;}
+.main2 .con2_ul li{ border-bottom:1px solid rgba(255,255,255,0.2); line-height:160%; overflow:hidden; clear:both; padding:10px 0;}
+.main2 .con2_ul li .tm{ width:850px;}
+
+.main2 .con2_ul li .btn3{ font-size:24px;}
+.main2 .con2_ul li .btn3 span{border-radius:10px;background:-webkit-gradient(linear, 0 0%, 0 100%, from(#FFF),color-stop(70%, #AAA), color-stop(70%, #BBB), color-stop(100%, #fff)); padding:2px 8px; color:#390;text-shadow: none;cursor:pointer;}
+.main2 .con2_ul li .btn3 span.current{background:-webkit-gradient(linear, 0 0%, 0 100%, from(#668f29),color-stop(70%, #6c9339), color-stop(70%, #568616), color-stop(100%, #558310)); color:#FFF}
+
+/**/
+.main2 .con_ul li .Detail{ margin-left:50px;}
+.main2 .con_ul li .Detail span{ padding-right:30px;}
+.main2 .con_ul li .Detail .error{ background: url(../images/key_error.gif) right center no-repeat;}
+.main2 .con_ul li .Detail .right{ background: url(../images/key_right.gif) right center no-repeat;}
+.main2 .con_ul li .Detail .exp{cursor:pointer;border:1px solid #bbb;border-radius:10px; padding-left:30px;}
+.main2 .con_ul li .Detail .exp.sel{border:1px solid #FF3; color:#FF9;}
+
+
+.main2 .btn{ text-align:center}
+.main2 .btn li{padding:3px 20px; margin:5px;cursor:pointer; line-height:40px; background:-webkit-gradient(linear, 0 0%, 0 100%, from(#FFF),color-stop(70%, #AAA), color-stop(70%, #BBB), color-stop(100%, #fff)); border:2px solid #bbb; color: #666; font-size:28px; text-align:center;   text-shadow:1px 1px 0px #FFF; display:inline-block; min-width:70px;border-radius:10px; margin-top:20px;}
+.main2 .btn li.blue { background:-webkit-gradient(linear, 0 0%, 0 100%, from(#FFF),color-stop(70%, #75D0EF), color-stop(70%, #2BB8E3), color-stop(100%, #AADEF0)); border:2px solid #15A4D0; color:#15A4D0;text-shadow:1px 1px 0px #fff; }
+.main2 .btn li.red { background: -webkit-gradient(linear, 0 0%, 0 100%, from(white),color-stop(70%, #F66), color-stop(70%, #f66), color-stop(100%, #AADEF0)); border: 2px solid #f66; color: #f66; text-shadow: 1px 1px 0px white; }
+
+.main2 .upOne{background: url(../images/arrowL.png) no-repeat;width: 100px;height: 100px;position: absolute;margin: 300px -80px;}
+.main2 .upOne:hover{background: url(../images/arrowLo.png) no-repeat;cursor:pointer;}
+.main2 .nextOne{background: url(../images/arrowR.png) no-repeat;width: 100px;height: 100px;position: absolute;margin: 300px 1210px;}
+.main2 .nextOne:hover{background: url(../images/arrowRo.png) no-repeat;cursor:pointer;}
+
+/*背景半透效果*/
+.lightbox { position:absolute; z-index:1000; width:100%; height:100%; background:rgba(0,0,0,0.8);top:0;}
+
+/*提示框*/
+.alert {opacity: 0.5;width: 100%;height: 100%;background-color: black;}
+.alert span{color: white;position: absolute;padding-top: 25%;font-size: 60px;padding-left: 15%;}
+
+/*提示弹框*/
+.topTips {width:800px;height:400px; padding:15px; -webkit-border-radius:10px; border:2px #333 solid; position:absolute; left:50%; top:50%; margin:-200px 0 0 -400px;z-index:1000;background: url(../images/body_bg.png) center; color:#CCC}
+.topTipsText {height:350px; overflow:hidden;font-size:24px;}
+.scoreTip {text-align: center;font-size: 35px;color: #FC6;margin: 50px auto; height: 280px;line-height: 280px;}
+.topTipsText h3{ font-size:30px; color:#FF9; font-weight:normal; margin-bottom:20px}
+
+.topTips .btn2_ul{ text-align:center;position: absolute;bottom: 20px;left: 50%;width: 600px; margin-left: -300px;}
+.topTips .btn2_ul li{ cursor:pointer;display:inline-block; padding:0 15px; margin:0 15px;background:-webkit-gradient(linear, 0 0%, 0 100%, from(#FFF),color-stop(70%, #AAA), color-stop(70%, #BBB), color-stop(100%, #fff)); color:#333;border-radius:10px;border:2px solid #bbb;}
+.topTips .btn2_ul li.current{background:-webkit-gradient(linear, 0 0%, 0 100%, from(#FFF),color-stop(70%, #75D0EF), color-stop(70%, #2BB8E3), color-stop(100%, #AADEF0));border:2px solid #15A4D0;}
+
+
+/*=========== footer ==========================*/
+footer{ background:rgba(0,25,40,0.7); width:100%; position:absolute; height:40px; line-height:40px; bottom:0; color:#FFF; border-top:1px dashed rgba(255,255,255,0.5) }
+footer .Tip{text-align:center;}
+footer .Tip span{ margin-right:20px;}
+footer .Tip .OK{ background:url(../images/icon_ok.png) no-repeat left center; padding-left:45px;cursor: pointer;}
+footer .Tip .arrow{ background: url(../images/arrow_left.png) no-repeat left, url(../images/arrow_right.png) no-repeat 22px; padding-left:44px;}
+footer .Tip .Return{ background:url(../images/icon_pre.png) no-repeat left center;padding-left:45px;cursor: pointer;}
+footer .Tip .on{background:url(../images/icon_on.png) no-repeat left center;padding-left:78px;}
+footer .Tip .next{background:url(../images/icon_next.png) no-repeat left center;padding-left:78px;}
+footer .page{ float:right; padding-right:30px;}
+
+
+.arrow {}
+.arrow div {position:absolute; z-index:99; width:76px; height:92px;margin:0; padding:0; cursor:pointer; top:300px;}
+.arrow div.arrowL {left:0px; background:url(../images/arrowL.png) no-repeat;}
+.arrow div.arrowR {right:0px; background:url(../images/arrowR.png) no-repeat;}
+.arrow div.arrowL:hover {background:url(../images/arrowLo.png) no-repeat;}
+.arrow div.arrowR:hover {background:url(../images/arrowRo.png) no-repeat;}
+
+
+

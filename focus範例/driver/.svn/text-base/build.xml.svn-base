@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- widget ant 文件，项目名统一为widgetBuild，不允许修改 -->
+<project name="widgetBuild" default="release">
+	<!-- 引入基础ant.xml -->
+	<import file="../../widgets-base.xml" />
+	<!-- 引入公用属性定义 -->
+	<property file="${widgetDev.dir}/widgets-base.properties" />
+
+	<!-- 根据应用情况更改 -->
+	<!-- 应用名称 -->
+	<property name="app" value="driver" />
+	<!-- 应用ui目录 -->
+	<property name="app.dir" value="${widget.dir}/web" />
+	<!-- api目录 -->
+	<property name="appApi.dir" value="${widget.dir}/api" />
+	<!-- 缺省版本特征目录 -->
+	<property name="default.features.dir" value="owb" />
+	<!-- 编译时版本特征目录 -->
+	<property name="compile.features.dir" value="${js.features.dir}/${default.features.dir}" />
+	<!-- wgt输出目录 -->
+	<property name="wgt.out.dir" value="${wgt.dir}/${default.features.dir}" />
+
+
+	<!-- 拷贝文件到临时目录 -->
+	<target name="-copy-file-to-temp">
+		<!-- 只拷贝指定的两个文件 -->
+		<copydir src="${js.lib.dir}" dest="${temp.dir}/scripts" includes="${jquery.js},mstar-core-1.0.1.js,mstar-base-1.0.1.js" />
+		<copydir src="${widget.dir}" dest="${temp.dir}/" includes="background.html,manifest.json" />
+		<!-- 拷贝指定目录下的文件，并过滤不需要的内容-->
+		<copy todir="${temp.dir}" filtering="true">
+			<fileset dir="${app.dir}">
+				<exclude name="test.html" />
+				<exclude name="**/.svn/**" />
+				<exclude name="scripts/*.js" />
+			</fileset>
+		</copy>
+		<replace file="${temp.dir}/index.html">
+			<replacefilter token="@jquery.js@" value="${jquery.js}" />
+		</replace>
+	</target>
+
+		<!-- js压缩 -->
+	<target name="-js-compile" depends="-init,-copy-file-to-temp,-create-config-xml">
+		<!--
+        compilationLevel 压缩级别：whitespace、simple、advanced
+        warning警告级别：quiet、default、verbose
+        output输入js
+        -->
+		<jscomp compilationLevel="simple" warning="quiet" debug="false" output="${temp.dir}/scripts/main.js">
+			<!-- 不需要压缩和第三方包-->
+			<externs dir="${js.lib.dir}">
+				<file name="${jquery.js}" />
+				<file name="mstar-base-1.0.1.js" />
+				<file name="mstar-core-1.0.1.js" />
+			</externs>
+			<sources dir="${compile.features.dir}">
+                <file name="${keyCode.js}"/>
+            </sources>
+            <sources dir="${appApi.dir}">
+                <file name="testData.js"/>
+            </sources>
+			<sources dir="${app.dir}/scripts">
+                <file name="tips.js"/>
+                <file name="time.js"/>
+                <file name="menu.js"/>
+                <file name="numBer.js"/>
+                <file name="test.js"/>
+                <file name="exam.js"/>
+                <file name="error.js"/>
+                <file name="ranDomTest.js"/>
+                <file name="chapter.js"/>
+                <file name="main.js"/>
+            </sources>
+		</jscomp>
+	</target>
+</project>
